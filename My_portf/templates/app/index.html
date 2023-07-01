@@ -1,0 +1,379 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="  {% static 'css/style.css' %} ">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <section class="navbar">
+        <div class="container">
+            <ul class="navbar-bar">
+                <li><a href=""><i class="fab fa-etsy"></i></a></li>
+                <li><a href=""><i class="fas fa-home"></i></a></li>
+                <li><a href="#secondpage"><i class="fas fa-user-alt"></i></a></li>
+                <li><a href="#fourthpage"><i class="fas fa-th-large"></i></a></li>
+                <li><a href="#fifthpage"><i class="fas fa-scroll"></i></a></li>
+                <li><a href="#sixpage"><i class="far fa-id-card"></i></a></li>
+            </ul>
+
+
+        </div>
+    </section>
+    <!-- navbar -->
+    <!-- home page  start-->
+    <section class="main">
+
+        <div class="container1">
+
+
+            <div class="name">
+                <h2>Hello I am Emil</h2>
+                <h1>EMIL</h1>
+                <p>I will be developer</p>
+            </div>
+
+
+
+        </div>
+        </div>
+
+    </section>
+    <!-- home page end -->
+    <!-- secondpage start -->
+    <section id="secondpage">
+
+        <div class="header">
+            <h3>ABOUT <span>ME</span></h3>
+            <div class="spane"></div>
+
+            </p>
+        </div>
+        <div class="main1">
+            <div class="img" src='{%static 'images/profile.jpg'%}'></div>
+            <div>
+                <div class="master">
+                    <div class="info1">
+                        <div>
+                            <h3>I'm Emil Abdullayev</h3>
+                        </div>
+                        <p>i will be developer</p>
+                        <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores.</p>
+                        <p>I am good at</p>
+                    </div>
+
+                </div>
+                <div class="minibox">
+                    <div class="miniboxitems">
+                        <div><i class="fas fa-medal"></i></div>
+                        <div class="miniboxitemsword">
+                            <h3>8 Years Job</h3>
+                            <p>Experience</p>
+                        </div>
+
+                    </div>
+                    <div class="miniboxitems">
+                        <div><i class="fas fa-handshake"></i></div>
+                        <div class="miniboxitemsword">
+                            <h3>500+ Projects</h3>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                    <div class="miniboxitems">
+                        <div><i class="fas fa-code"></i></div>
+                        <div class="miniboxitemsword">
+                            <h3>Freelance</h3>
+                            <p>Available</p>
+                        </div>
+                    </div>
+                    <div class="miniboxitems">
+                        <div><i class="fas fa-bookmark"></i></div>
+                        <div class="miniboxitemsword">
+                            <h3><a href="#fourthpage">Portfolio</a></h3>
+                            <p>Latest Work</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="download"><i class="fas fa-download"></i><span>Download my cv</span></button>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="mainbox1">
+                <h3>Experience</h3>
+
+
+                {% for exp in experiences %}
+                <div class="information">
+                    <span><i class="fas fa-calendar-week"></i>{{exp.exp_year}}</span>
+                    <h5>{{exp.exp_tittle}}</h5>
+                    <p>{{exp.exp_about}}</p>
+                </div>
+                {% endfor %}
+
+
+            </div>
+            <div class="mainbox2">
+                <h3>Education</h3>
+                {% for edu in educations %}
+                <div class="information">
+                    <span><i class="fas fa-calendar-week"></i>{{edu.edu_year}}</span>
+                    <h5>{{edu.edu_tittle}}</h5>
+                    <p>{{edu.edu_about}}</p>
+                </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
+        <!-- <div class="main3">
+            <div class="achvbar">
+                <div class="range-element">
+                    <div class="infos">
+                        <span>Html</span>
+                        <span style="padding-right: 30%;">60%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="range-element">
+                    <div class="infos">
+                        <span>Html</span>
+                        <span style="padding-right: 30%;">60%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="range-element">
+                    <div class="infos">
+                        <span>Html</span>
+                        <span style="padding-right: 30%;">60%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="range-element">
+                    <div class="infos">
+                        <span>Html</span>
+                        <span style="padding-right: 30%;">60%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="range-element">
+                    <div class="infos">
+                        <span>Html</span>
+                        <span style="padding-right: 30%;">60%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="range-element">
+                    <div class="infos">
+                        <span>Html</span>
+                        <span style="padding-right: 30%;">60%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="range-element">
+                    <div class="infos">
+                        <span>Html</span>
+                        <span style="padding-right: 30%;">60%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="range-element">
+                    <div class="infos">
+                        <span>Html</span>
+                        <span style="padding-right: 30%;">60%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="range-element">
+                    <div class="infos">
+                        <span>Html</span>
+                        <span style="padding-right: 30%;"><i class="fas fa-circle"></i>60%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+
+            </div>
+ -->
+
+        </div>
+
+    </section>
+    <!-- second page end -->
+    <section id="thirdpage">
+        <div class="thirdheader">
+            <div>
+                <h2></h2>
+            </div>
+            <div></div>
+            <div class="thirdmain3">
+                <div class="slider">
+
+                    {% for opinion in opinions %}
+                    <div class="box1">
+                        <div class="avatar"><img src="{{opinion.image_path}}" alt=""></div>
+                        <div>
+                            <p>{{opinion.opinion_text}}</p>
+                            <div class="undername">
+                                <h5>{{opinion.opinion_name}}</h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="btns"></div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </section>
+    <section id="fourthpage">
+        <div class="container4">
+            <div class="header4">
+                <h3>MY <span>PORTFOLIO</span></h3>
+                <div class="spant"></div>
+
+            </div>
+            <div>
+
+                <div class="allmain">
+                    <div class="portbox">
+                        <div class="portimage">
+                            {% for work in projects %}
+                            <div class="info">
+                                <img src="{{ baseUrl }}uploads/{{opinion.image_path}}" alt="">
+                                <a href="{{work.portfolio_link}}">
+                                    <div class="overlay">
+                                        <h1>{{work.portfolio_name}}</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+    <section id="fifthpage">
+        <div class="container5">
+            <div class="header5">
+                <h3>MY <span>BLOGS</span></h3>
+                <div class="spancs"></div>
+
+            </div>
+            <div class="blogs">
+                <div class="sliderblog">
+
+
+                    {% for blog in blogs %}
+                    <div class="blogs1">
+                        <div class="blogimage">
+                            <a href="{{blog.blog_link}}">
+                                <img src="{{ baseUrl }}{{opinion.image_path}}" alt="">
+                            </a>
+                        </div>
+                        <a href="{{blog.blog_link}}">
+                            <h3>{{blog.blog_name}}</h3>
+                        </a>
+                        <p>{{blog.blog_text}}</p>
+                        <a class="bloglink" href="{{blog.blog_link}}">read more</a>
+                    </div>
+
+                    {% endfor %}
+                </div>
+
+                <div class="butn">
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+    <section id="sixpage">
+        <div class="container6">
+            <div class="header6">
+                <h3>Contact <span>Me</span></h3>
+                <div class="spanc"></div>
+
+
+            </div>
+            <div class="contact">
+                <div class="boxleft">
+                    <div class="boxheader">
+                        <h3>Get In Touch</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                    </div>
+                    <div class="boxbody">
+                        <div class="icon6"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info6">301 The Greenhous,<br> London, E2 8DY.</div>
+                    </div>
+                    <div class="boxbody">
+                        <div class="icon6"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info6">301 The Greenhous,<br> London, E2 8DY.</div>
+                    </div>
+                    <div class="boxbody">
+                        <div class="icon6"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info6">301 The Greenhous,<br> London, E2 8DY.</div>
+                    </div>
+
+                </div>
+                <div class="boxright">
+                    <form action="/myportfolio/contact" method="post" novalidate>
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button type="submit" class="btn btn-success">Send Now</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="/static/js/app.js"></script>
+
+</body>
+
+</html>
